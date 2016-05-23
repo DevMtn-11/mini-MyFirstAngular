@@ -1,5 +1,6 @@
 angular.module('friendsList')
   .controller('mainCtrl', function($scope) {
+    $scope.name = 'Joe';
 
     $scope.friends = [
       'James',
@@ -9,8 +10,10 @@ angular.module('friendsList')
     ];
 
     $scope.addFriend = function() {
-      $scope.friends.push($scope.friend);
+      $scope.friends.push($scope.newFriend);
       $scope.friend = '';
     };
+
+    console.log($scope);
 
   });
